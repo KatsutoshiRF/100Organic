@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Produto</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de Produto</h1>
+        <h:dataTable var="produto" value="#{produtoMB.listaProdutos}" border="1">
+            <f:facet name="header">
+                <h:outputText value="Tabela de Produtos" />
+            </f:facet>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Nome" />
+                </f:facet>
+                <h:outputText id="idNomeProduto" value="#{produto.nomeProduto}"  />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Qualidade" />
+                </f:facet>
+                <h:outputText id="idQualProduto" value="#{produto.qualidadeProduto}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Preço" />
+                </f:facet>
+                <h:outputText id="idPrecoProduto" value="#{produto.precoProduto}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Medida" />
+                </f:facet>
+                <h:outputText  id="idMedidaProduto" value="#{produto.medidaProduto}"/>
+            </h:column>
+           
+        </h:dataTable>
+        <h:button value="Voltar" outcome="index"/>
+    </h:body>
+</html>
+

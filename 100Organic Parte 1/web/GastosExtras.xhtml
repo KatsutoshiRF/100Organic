@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:head>
+        <title>Registro de Gasto Extra</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de Gasto Extra</h1>
+        <h:dataTable var="gastoExtra" value="#{gastoExtraMB.listaGastosExtras}" border="1">
+            <f:facet name="header">
+                <h:outputText value="Tabela de Gastos Extras" />
+            </f:facet>
+
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Nome" />
+                </f:facet>
+                <h:outputText id="idNomeInsumo" value="#{gastoExtra.nomeGastoExtra}"  />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Quantidade" />
+                </f:facet>
+                <h:outputText id="idQuanInsumo" value="#{gastoExtra.quanGastoExtra}" />
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Vslor" />
+                </f:facet>
+                <h:outputText id="idPrecoInsumo" value="#{gastoExtra.valorGastoExtra}" />
+            </h:column>
+                       
+        </h:dataTable>
+        <h:button value="Voltar" outcome="index"/>
+    </h:body>
+</html>
+
